@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Assignment_4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+	//isUnique test if a map has unique values
+	public static boolean isUnique(Map<String, String> map){
+		Set<String> values = new HashSet();
+		//iterate over the values in the map
+		for (String value : map.values()) {
+			// check if the set has the value we are currently examined
+			if (values.contains(value)) {
+				return false; //the value is already there
+			} else
+			{
+				//add the value from the map to the set
+				values.add(value);
+			}
+		}
+		// no repeating values were found in the set
+		return true;
+	}
+}
